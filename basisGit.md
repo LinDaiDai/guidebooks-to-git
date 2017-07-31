@@ -27,8 +27,8 @@ https://github.com/
 ​	git config --list
 
   若:
-
-![img1](E:\每日笔记\course of git\img1.png)
+  
+![img1](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img1.png?raw=true)
 
 ​	显示除了user.name 以及 user.email   即输入成功;
 
@@ -40,7 +40,7 @@ https://github.com/
 
 ​			工作区域      暂存区域      Git仓库
 
-![img2](E:\每日笔记\course of git\img2.png)
+![img2](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img2.png?raw=true)
 
 		#####  		2.Git的工作流程
 
@@ -66,11 +66,11 @@ https://github.com/
 
 ​	3.输入命令     git  init        会显示初始化了一个空的git仓库(如图):
 
-​	![img3](E:\每日笔记\course of git\img3.png) 
+​	![img3](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img3.png?raw=true) 
 
   		并且在文件夹中创建了一个git文件(如图):
 
-​	![img4](E:\每日笔记\course of git\img4.png)
+​	![img4](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img4.png?raw=true)
 
 
 
@@ -84,7 +84,7 @@ https://github.com/
 
 ​		显示如下图:	
 
-![img5](E:\每日笔记\course of git\img5.png)
+![img5](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img5.png?raw=true)
 
 ​		
 
@@ -94,7 +94,7 @@ https://github.com/
 
 ​		输入  git status  即可查看此时git的状态 (如图):
 
-​		![img6](E:\每日笔记\course of git\img6.png) 
+​		![img6](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img5.png?raw=true) 
 
 ​		 在一个默认的分区 master 中
 
@@ -108,7 +108,7 @@ https://github.com/
 
 ​	此时 在 git status 下查看  ,可发现:
 
-​	![img7](E:\每日笔记\course of git\img7.png)		
+​	![img7](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img7.png?raw=true)		
 
 ​		此时发现 , README.md 是已经添加到了暂存区域并提交的
 
@@ -118,7 +118,7 @@ https://github.com/
 
 ​	2.将LECENSE添加至暂存区域并查看状态
 
-​	![img8](E:\每日笔记\course of git\img8.png)
+​	![img8](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img8.png?raw=true)
 
 ​	
 
@@ -174,7 +174,7 @@ https://github.com/
 
       如下图( README 和  LICENSE  俩个文件都是改动过的 ):
 
-![img9](E:\每日笔记\course of git\img9.png)
+![img9](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img9.png?raw=true)
 
 此时 若输入git add LICENSE.md  回车
 
@@ -200,13 +200,13 @@ https://github.com/
 
 ​	如下图:有俩个分支master feature	
 
-​	![img15](E:\每日笔记\course of git\img15.png)
+​	![img15](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img15.png?raw=true)
 
 ​	d1d14c6表示的是俩个分支共同拥有的		
 
 #### 1.9 git reset 和 git checkout 的区别
 
-![img10](E:\每日笔记\course of git\img10.png)
+![img10](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img10.png?raw=true)
 
 ​	不难看出
 
@@ -240,17 +240,17 @@ https://github.com/
 
 ​	5.再执行	git reset --hard feature 	此时查看git log 对比第4步和第5步
 
-​		![img17](E:\每日笔记\course of git\img17.png)
+​		![img17](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img17.png?raw=true)
 
 ​		说明:	git reset  --hard feature命令将HEAD 指向的分支(即master)以及HEAD本身都切到了feature分支里,换句话说,原来的快照已经消失了(master1.txt那个快照不见了).
 
 ​	6.此时执行  git reset --soft HEAD~    和 git reset HEAD~	
 
-​		![img18](E:\每日笔记\course of git\img18.png)
+​		![img18](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img18.png?raw=true)
 
 ​		说明 :	--soft 仅仅将指针HEAD指向了上一个快照,    --mixed 也会将指针HEAD指向上一个快照, mixed还会将HEAD指针移动后的快照回滚到暂存区域		此时查看git status:
 
-​	![img19](E:\每日笔记\course of git\img19.png)
+​	![img19](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img19.png?raw=true)
 
 ​		说明: 回到了" 还没有将3.txt 添加到暂存区域 " 时
 
@@ -280,19 +280,19 @@ https://github.com/
 
   12.  执行 :    git log 查看历史记录:
 
-       ![img11](E:\每日笔记\course of git\img11.png)
+       ![img11](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img11.png?raw=true)
 
 结构模型:
 
-![img12](E:\每日笔记\course of git\img12.png)
+![img12](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img12.png?raw=true)
 
 14. 执行 git reset HEAD~       回车               git status 
 
-    ![img13](E:\每日笔记\course of git\img13.png)
+    ![img13](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img13.png?raw=truef git\img13.png)
 
 结构模型
 
-![img14](E:\每日笔记\course of git\img14.png)
+![img14](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img14.png?raw=true)
 
 此时,git会检测到工作区域内的LICENSE版本比暂存区域内的版本新,所以会有提示,是否要更新
 
