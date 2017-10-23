@@ -27,7 +27,7 @@ https://github.com/
 ​	git config --list
 
   若:
-  
+
 ![img1](https://github.com/LinDaiDai/guidebooks-to-git/blob/master/basisGitImg/img1.png?raw=true)
 
 ​	显示除了user.name 以及 user.email   即输入成功;
@@ -76,7 +76,7 @@ https://github.com/
 
 ​	4.在当前MyProject文件夹内创建一个md类型的文本(文本名为README)  并以notepad++打开(为防止乱码,可把notepad++内的编码格式改为 UTF-8无BOM编码格式;   (即工作流程中的第一步)
 
-​	5.输入命令:  git add README.md    (即工作流程中的第二步,将README文件添加至暂存区域)
+​	5.输入命令:  git add README.md    (即工作流程中的第二步,将README文件添加至暂存区域,若要添加全部的文件可用 --all)
 
 ​	 回车之后再输入:     git commit -m "add a readme file"    (commit 提交,即工作流程中的第三步,将暂存区域内的README文件提交到git仓库)
 
@@ -153,6 +153,12 @@ https://github.com/
 ​       -将暂存区域的文件还原到工作目录
 
 区别详情请参考1.9的例1
+
+  快照1   快照2  快照3    当HEAD处于快照3时,使用git reset --hard HEAD~ 回到快照2 ,若此时再想返回快照3:
+
+​	方法1:  查看以前的历史记录  找到快照3的id 并使用git reset -hard 快照3id  ;
+
+​	方法2: 若找不到快照3的id ,可使用git reflog  (注:用来记录你的每一次指令)查看你的快照3的id名   ,然后再执行git reset --hard 快照3id
 
 #### 1.7 git checkout 
 
@@ -434,3 +440,44 @@ $ git pull --rebase origin master
 ```
 
 ​	然后你在执行 push 就可以了.
+
+
+
+**注:**
+
+​	执行  git reflog	查看所有快照的id等等
+
+​	若push时有一些关于 REBASE的提示,可执行 git  rebase master
+
+
+
+### 第六章: Fork
+
+当你觉得gitbub上有人的项目写的特别好,你也想和他一起完善这个项目的时候,你就可以使用Fork
+
+1.在别人的项目里点击Fork,此时返回自己的github 可以发现自己的profile下多了一个别人的项目
+
+2.使用clone自己的这个项目到本地,在本地进行修改操作
+
+3.修改完之后,使用指令
+
+
+
+```
+$ git add --all
+$ git commit -m "add some file"
+$ git push
+$ git remote add upstream 别人的这个项目的git仓库地址
+```
+
+4.执行完后可以使用git remote -v查看是否添加成功,
+
+```
+origin  git@github.com:LinDaiDai/vue2-axf.git (fetch)
+origin  git@github.com:LinDaiDai/vue2-axf.git (push)
+upstream        https://github.com/tangcaiye/vue2-axf.git (fetch)
+upstream        https://github.com/tangcaiye/vue2-axf.git (push)
+
+```
+
+5.到你的github找到刚刚的项目,点击New pull request 将你刚刚要添加的内容提及上去,等待对方同意就ok
