@@ -16,9 +16,9 @@ https://github.com/
 
 ​	在命令行模式里输入以下命令
 
-​      git config --gobal user.name "用户名"
+​      git config --global user.name "用户名"
 
-​      git config --gobal user.email "邮箱名"
+​      git config --global user.email "邮箱名"
 
   注:全英文,不能用中文
 
