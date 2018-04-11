@@ -481,3 +481,14 @@ upstream        https://github.com/tangcaiye/vue2-axf.git (push)
 ```
 
 5.到你的github找到刚刚的项目,点击New pull request 将你刚刚要添加的内容提及上去,等待对方同意就ok
+
+###第七章：SSH Keys
+
+1.要确定你的电脑上安装了git 并且添加到了环境变量中
+2.在开始中找到git bash并打开，输入 $ssh-keygen -t rsa -C "username@email.com" 
+此时会提示你输入存储key的文件名（我输入github），并提示你输入密码与确认密码（我这里选择不输入），接着会生成连个文件名一个是公钥与私钥文件并存储在C:\Users\***文件夹下：github，github.pub
+![img17](E:\每日笔记\course of git\img16.png)
+![img18](E:\每日笔记\course of git\img16.png)
+3.在github上 settings -> SSH and GPG keys -> new SSH key 
+title 随便输 
+key 填入 C:\Users\cestbon\.ssh\id_rsa.pub 内的内容
